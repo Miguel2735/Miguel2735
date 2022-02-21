@@ -47,6 +47,7 @@ TextButton.Size = UDim2.new(0, 857, 0, 590)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
+TextButton.Text = ""
 
 local function DMKWOR_fake_script() -- menuu.LocalScript 
 	local script = Instance.new('LocalScript', menuu)
