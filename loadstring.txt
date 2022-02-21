@@ -1,0 +1,94 @@
+local menuu = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+
+menuu.Name = math.random(1000000, 9999999)
+menuu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+menuu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = menuu
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.Position = UDim2.new(0.330221713, 0, 0.279661, 0)
+Frame.Size = UDim2.new(0, 290, 0, 260)
+Frame.ZIndex = 2
+
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.155172408, 0, 0.0230769236, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "hackzz"
+TextLabel.TextColor3 = Color3.fromRGB(91, 91, 91)
+TextLabel.TextSize = 39.000
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+TextBox.BorderColor3 = Color3.fromRGB(62, 62, 62)
+TextBox.Position = UDim2.new(0.155172408, 0, 0.480769217, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "PASSWORD"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(57, 57, 57)
+TextBox.TextSize = 14.000
+
+TextButton.Parent = menuu
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Selectable = false
+TextButton.Size = UDim2.new(0, 857, 0, 590)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+local function DMKWOR_fake_script() -- menuu.LocalScript 
+	local script = Instance.new('LocalScript', menuu)
+
+	local password = "kur"
+	
+	script.Parent.Frame.TextBox.FocusLost:Connect(function()
+		if script.Parent.Frame.TextBox.Text == password then
+			local ScreenGui = Instance.new("ScreenGui")
+			local Frame = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local TextLabel = Instance.new("TextLabel")
+			local UICorner_2 = Instance.new("UICorner")
+	
+	
+			ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+			ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			ScreenGui.Name = math.random(1000000, 9999999)
+	
+			Frame.Parent = ScreenGui
+			Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+			Frame.Position = UDim2.new(0.277712971, 0, 0.144067794, 0)
+			Frame.Size = UDim2.new(0, 380, 0, 419)
+	
+			UICorner.CornerRadius = UDim.new(0, 12)
+			UICorner.Parent = Frame
+			
+			TextLabel.Parent = Frame
+			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.Position = UDim2.new(0.144736841, 0, 0.880668283, 0)
+			TextLabel.Size = UDim2.new(0, 271, 0, 50)
+			TextLabel.Font = Enum.Font.SourceSans
+			TextLabel.Text = "hackzz - © ALL RIGHTS RESERVED"
+			TextLabel.TextColor3 = Color3.fromRGB(102, 102, 102)
+			TextLabel.TextSize = 17.000
+	
+			UICorner_2.CornerRadius = UDim.new(0, 12)
+			UICorner_2.Parent = TextLabel
+			
+			script.Parent:Destroy()
+		end
+	end)
+end
+coroutine.wrap(DMKWOR_fake_script)()
